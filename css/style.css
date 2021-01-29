@@ -1,0 +1,225 @@
+@import url('utilities.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lightsteelblue;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* NAVBAR */
+nav {
+  min-height: 80px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightblue;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style: none;
+  transition: transform 0.1s ease-in;
+  margin: 1rem;
+}
+
+ul li:hover {
+  transform: scale(1.3);
+}
+
+a {
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  color: black;
+}
+
+#navbar__list a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+/* MAIN SECTION */
+.main__hero {
+  background: url('../images/forest.jpeg') no-repeat center center/cover;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__hero h1 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.main__hero h2 {
+  color: white;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+section {
+  opacity: 0.7;
+}
+
+.landing__container {
+  color: white;
+  height: 70vh;
+  margin: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 3);
+  padding: 6rem;
+  border: 4px solid black;
+  border-radius: 30px;
+}
+
+.landing__container h2 {
+  text-align: center;
+}
+
+/* BUTTONS */
+button.top-btn {
+  z-index: -100;
+  position: absolute;
+  position: fixed;
+  border-radius: 10%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  display: none;
+}
+
+button:hover {
+  opacity: 1;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.collapse {
+  border-radius: 5rem;
+  display: block;
+  margin: 1rem 5rem;
+}
+
+/* FOOTER */
+.footer__container {
+  background-color: black;
+  min-height: 20vh;
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__container h3 {
+  text-align: center;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__container i {
+  color: white;
+  padding: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1000px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navbar__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .landing__container {
+    padding: 0.01;
+    margin: 0;
+    height: auto;
+  }
+
+  main {
+    margin-top: 20vh;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__container ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section h2,
+  section p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  /* NOTHING TO ADD, DON'T KNOW HOW TO ACTIVATE/DE-ACTIVATE SECTIONS WITHIN VIEW AT THIS WIDTH 
+  I GUESS I HAVE TO USE GET BOUNDING CLIENT RECTAGLE AND SCROLL FOR THIS (NOT INTERSECTION OBSERVER)*/
+}
