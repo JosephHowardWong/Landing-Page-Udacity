@@ -26,11 +26,11 @@ li .your-active-class {
   border: 5px solid red;
 }
 
-main .your-active-class {
+.your-active-class {
   opacity: 1;
 }
 
-button.top-btn.your-active-class {
+.top-btn.your-active-class {
   z-index: 100;
   display: inline-block;
 }
@@ -44,8 +44,12 @@ button.top-btn.your-active-class {
   right: 0;
 }
 
-header nav.no-show {
+.navbar__menu.no-show {
   opacity: 0;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* MARGIN AND PADDINGS */

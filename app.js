@@ -15,6 +15,7 @@ sections.forEach(section => {
     const navLi = document.createElement('li');
     const anch = document.createElement('a');
     anch.innerHTML = section.getAttribute('data-nav');
+    // anch.classList.add(nav-anch);
     anch.classList.add(section.id);
     anch.href = `#${section.id}`;
     navLi.appendChild(anch);
@@ -72,7 +73,7 @@ const activateSecNav = anchId => {
 const anchors = document.querySelectorAll('#navbar__list a');
 
 anchors.forEach(anchor=> {
-    anchor.addEventListener('click', 
+    anchor.addEventListener('click',
         (e) => scrollToSec(e, anchor.classList[0]))
 });
 
