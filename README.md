@@ -71,3 +71,6 @@ let callback = (entries, observer) => {
 > Implementing intersection detection in the past involved event handlers and loops calling methods like Element.getBoundingClientRect() to build up the needed
 > information for every element affected. Since all this code runs on the main thread, even one of these can cause performance problems. When a site is loaded with
 > these tests, things can get downright ugly.
+
+
+- This site is hosted at [https://udacity-landing-page-jw.netlify.app/](https://udacity-landing-page-jw.netlify.app/)
